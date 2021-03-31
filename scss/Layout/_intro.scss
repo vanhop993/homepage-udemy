@@ -1,0 +1,28 @@
+.intro{
+    background: linear-gradient(-45deg,#EC5252 0%,#6E1A52 100%);
+    .intro__icon{
+        @include styleText($color-white-0,$fs-4 + 7,$fw-100);
+        margin-right: $mg-1 +6;
+    }
+    .intro__text{
+        .intro__text-title{
+            @include styleText($color-white-0,$fs-0 + 2,$fw-bold-1);
+            margin:0;
+        }
+        .intro__text-content{
+            @include styleText($color-white-0,$fs-0,$fw-normal);
+            margin:0;
+        }
+    }
+}
+//responsive
+.intro{
+    @include resposive('medium'){
+        display: none;
+    }
+    .intro__icon{
+        @include resposive('extra-large'){
+            display: none;
+        }
+    }
+}

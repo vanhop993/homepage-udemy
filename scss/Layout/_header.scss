@@ -1,0 +1,65 @@
+header{
+    @include styleText($color-black-light,$fs-1,$fw-normal);
+    .header__nav{
+        padding-top: 0;
+        padding-bottom: 0;
+        flex-wrap: nowrap;
+    }
+}
+.header__left{
+    display: flex;
+    align-items: center;
+    .navbar-brand{
+        img{
+            width: 110px;
+        }
+    }
+    .header__cato{
+        margin: 0 20px;
+        a{
+            text-decoration: none;
+        }
+    }
+    .header__form{
+        // nếu không khai báo giá trị flex-grow là 0;
+        flex-grow: 1;
+    }
+}
+.header__right{
+    .navbar-nav{
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+        flex-direction: row;
+    }
+    .nav-link{
+        @include styleText($color-black-light,$fs-1,$fw-normal);
+    }
+}
+//Responsive
+.header__right{
+    @include resposive("extra-large"){
+        .business,.teach{
+            display: none;
+        }
+    }
+    @include resposive("medium"){
+        .ude-btnGroup{
+            display: none;
+        }
+    }
+}
+.header__left{
+    @include resposive("large"){
+        .header__cato{
+            margin:0 10px;
+        }
+    }
+    @include resposive("medium"){
+        justify-content: center;
+        .header__cato,.header__form{
+            display: none;
+            margin: 0;
+        }
+    }
+}

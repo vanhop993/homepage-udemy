@@ -1,0 +1,30 @@
+.carousel{
+        background-image: url(../images/cover.jpg);
+        width: 100%;
+        height: $height-3;
+        background-size: cover;
+        background-repeat: no-repeat ;
+        background-position: top;
+        @include resposive("small"){
+            height: $height-2;
+        }
+        .carousel__container{
+        width: 100%;
+        height: $height-3;
+        @include resposive("small"){
+            height: $height-2;
+        }
+            .carousel__headLine{
+                @include styleText($color-white-0,$fs-4,$fw-bold-1);
+                @include resposive("small"){
+                    @include styleText($color-white-0,$fs-3,$fw-bold-1);
+                }
+            }
+            .carousel__text{
+                @include styleText($color-white-0,$fs-0 + 3,$fw-normal);
+                @include resposive("small"){
+                    @include styleText($color-white-0,$fs-1,$fw-normal);
+                }
+            }
+    }
+}

@@ -1,0 +1,65 @@
+.relative-drop{
+    position: relative;
+    padding: $pd-1 0;
+    &:hover{
+        .header-dropDownMenu-right{
+            display: block;
+        }
+        .header-dropDownCart{
+            display: block;
+        }
+    }
+}
+.header-dropDownMenu-right{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 100;
+    display: none;
+    background-color: $color-white-0;
+    padding: 24px 16px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(20,23,28,.5);
+    a{
+        text-decoration: none;
+        font-weight: $fw-bold;
+    }
+    @include sizeDropDownMenu($width-1,$height-5);
+    &::before{
+        position: absolute;
+        top: -8%;
+        right: 5%;
+        z-index: -1;
+        content: '';
+        border-width: 0 10px 13px;
+        border-style: solid;
+        border-color: $color-trans $color-trans $color-white-0 $color-trans;
+    }
+}
+.header-dropDownCart{
+    position: absolute;
+    top: 100%;
+    right: 0%;
+    z-index: 100;
+    display: none;
+    background-color: $color-white-0;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 16px rgba(20,23,28,.5);
+    a{
+        text-decoration: none;
+        font-weight: $fw-bold;
+        user-select: none;
+    }
+    @include sizeDropDownMenu($width-1,$height-4);
+    &::before{
+        position: absolute;
+        top: -8%;
+        right: 5%;
+        z-index: -1;
+        content: '';
+        border-width: 0 10px 13px;
+        border-style: solid;
+        border-color: $color-trans $color-trans $color-white-0 $color-trans;
+    }
+}

@@ -1,0 +1,30 @@
+// file con phải có dấu _ ở đầu để cho trình biên dịch ko biên dịch file con 
+//helper
+@import './helper/variables';// file biến đầu tiên.
+@import './helper/mixin'; // tiếp theo là mixin.
+
+//vendor : là file chứa các thư viện scss và chỉ import file đuôi scss.
+
+//base
+@import './base/reset'; 
+@import './base/customizes';//dùng chung cho cả web
+
+//Components
+@import './Components/button';
+@import './Components/headerDropDownMenu';
+@import './Components/input';
+
+//layout
+@import './Layout/header';
+@import './Layout/carousel';
+@import './Layout/intro';
+@import './Layout/courses';
+@import './Layout/services';
+@import './Layout/students';
+@import './Layout/banner';
+@import './Layout/categories';
+@import './Layout/comment';
+@import './Layout/companies';
+@import './Layout/footer';
+//Page
+//Theme : luôn ở cuối 

@@ -1,0 +1,256 @@
+//sửa thuộc tính owl-carousel
+//sửa thuộc tính owl-carousel cho phần courses
+.courses{
+    .owl-theme{
+        .owl-stage-outer{
+            padding-bottom: 5px;
+        }
+        .owl-nav{
+            @include styleText($color-black-0,$fs-4,$fw-normal);
+            .disabled {
+                display: none;
+                cursor: default;
+            }
+            .owl-prev{
+                position: absolute;
+                top: 32%;
+                left: -5%;
+                width: 50px;
+                height: 50px;
+                line-height: 50px !important;
+                border-radius: 50%;
+                color: #0f7f97 !important;
+                background-color: $color-white-0 !important;
+                outline: none;
+                box-shadow: 0 0 1px 1px rgba(20,23,28,.1), 0 3px 1px 0 rgba(20,23,28,.1);
+                &:hover{
+                    opacity: 1;
+                    background-color: $color-white-0;
+                    color: #0f7f97;
+                    outline: none;
+                    box-shadow: 0 0 5px 5px rgba(20,23,28,.1), 0 8px 5px 0 rgba(20,23,28,.1);
+                }
+            }
+            .owl-next{
+                position: absolute;
+                top: 32%;
+                right: -5%;
+                width: 50px;
+                height: 50px;
+                line-height: 50px !important;
+                border-radius: 50%;
+                color: #0f7f97 !important;
+                background-color: $color-white-0 !important;
+                outline: none;
+                box-shadow: 0 0 1px 1px #14171c1a, 0 3px 1px 0 #14171c1a;
+                &:hover{
+                    opacity: 1;
+                    background-color: $color-white-0;
+                    color: #0f7f97;
+                    outline: none;
+                    box-shadow: 0 0 5px 5px rgba(20,23,28,.1), 0 8px 5px 0 rgba(20,23,28,.1);
+                }
+            }
+        }
+    }
+}
+// sửa thuộc tính owl carousel cho phần students
+.students{
+    .owl-theme{
+        .owl-stage-outer{
+            padding-bottom: 5px;
+        }
+        .owl-nav{
+            @include styleText($color-black-0,$fs-4,$fw-normal);
+            .disabled {
+                display: none;
+                cursor: default;
+            }
+            .owl-prev{
+                position: absolute;
+                top: 32%;
+                left: -3%;
+                width: 50px;
+                height: 50px;
+                line-height: 50px !important;
+                border-radius: 50%;
+                color: #0f7f97 !important;
+                background-color: $color-white-0 !important;
+                outline: none;
+                box-shadow: 0 0 1px 1px rgba(20,23,28,.1), 0 3px 1px 0 rgba(20,23,28,.1);
+                &:hover{
+                    opacity: 1;
+                    background-color: $color-white-0;
+                    color: #0f7f97;
+                    outline: none;
+                    box-shadow: 0 0 5px 5px rgba(20,23,28,.1), 0 8px 5px 0 rgba(20,23,28,.1);
+                }
+            }
+            .owl-next{
+                position: absolute;
+                top: 32%;
+                right: -3%;
+                width: 50px;
+                height: 50px;
+                line-height: 50px !important;
+                border-radius: 50%;
+                color: #0f7f97 !important;
+                background-color: $color-white-0 !important;
+                outline: none;
+                box-shadow: 0 0 1px 1px #14171c1a, 0 3px 1px 0 #14171c1a;
+                &:hover{
+                    opacity: 1;
+                    background-color: $color-white-0;
+                    color: #0f7f97;
+                    outline: none;
+                    box-shadow: 0 0 5px 5px rgba(20,23,28,.1), 0 8px 5px 0 rgba(20,23,28,.1);
+                }
+            }
+        }
+    }
+}
+//sửa thuộc tính owl carousel cho phần comment
+.comment{
+    .owl-theme{
+        .owl-stage-outer{
+            padding-bottom: 5px;
+        }
+        .owl-nav{
+            @include styleText($color-black-0,$fs-4,$fw-normal);
+            .disabled {
+                display: none;
+                cursor: default;
+            }
+            .owl-prev{
+                position: absolute;
+                top: 32%;
+                left: -3%;
+                width: 50px;
+                height: 50px;
+                line-height: 50px !important;
+                border-radius: 50%;
+                color: #0f7f97 !important;
+                background-color: $color-white-0 !important;
+                outline: none;
+                box-shadow: 0 0 1px 1px rgba(20,23,28,.1), 0 3px 1px 0 rgba(20,23,28,.1);
+                &:hover{
+                    opacity: 1;
+                    background-color: $color-white-0;
+                    color: #0f7f97;
+                    outline: none;
+                    box-shadow: 0 0 5px 5px rgba(20,23,28,.1), 0 8px 5px 0 rgba(20,23,28,.1);
+                }
+                @include resposive('large'){
+                    left: -4%;
+                }
+                @include resposive('medium'){
+                    left: -5%;
+                }
+            }
+            .owl-next{
+                position: absolute;
+                top: 32%;
+                right: -3%;
+                width: 50px;
+                height: 50px;
+                line-height: 50px !important;
+                border-radius: 50%;
+                color: #0f7f97 !important;
+                background-color: $color-white-0 !important;
+                outline: none;
+                box-shadow: 0 0 1px 1px #14171c1a, 0 3px 1px 0 #14171c1a;
+                &:hover{
+                    opacity: 1;
+                    background-color: $color-white-0;
+                    color: #0f7f97;
+                    outline: none;
+                    box-shadow: 0 0 5px 5px rgba(20,23,28,.1), 0 8px 5px 0 rgba(20,23,28,.1);
+                }
+                @include resposive('large'){
+                    right: -4%;
+                }
+                @include resposive('medium'){
+                    right: -5%;
+                }
+            }
+        }
+    }
+}
+//sửa thuộc tính boostrap
+//sửa thuộc tính boostrap cho phần courses
+.nav-tabs{
+    margin-bottom: 16px;
+    flex-wrap: nowrap;
+    .nav-link{
+        padding: 5px 9px;
+        border: none;
+        border-bottom: 5px solid $color-trans;
+        @include styleText($color-black-0,$fs-0,$fw-normal);
+        user-select: none;
+        &:hover{
+            border-bottom: 5px solid $color-trans;
+        }
+    }
+    .nav-link.active{
+        border-bottom: 5px solid $color-blue;
+    }
+    @include resposive('medium'){
+        display: block;
+    }
+}
+.card-body{
+    width: 100%;
+    height: 160px;
+    padding: 15px 10px 0 15px;
+    .card-title{
+        @include styleText($color-black-0,$fs-0,$fw-bold-1);
+        height: 42px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .card-text{
+        @include styleText($color-black-0,$fs-1 - 1,$fw-normal);
+        line-clamp: 1;
+        text-overflow: ellipsis;
+    }
+}
+//sửa thuộc tính boostrap cho phần dropmenu footer
+footer{
+    .footer__language{
+        .dropup{
+            min-width: 160px;
+            height: 38px;
+            .dropdown-toggle{
+                text-align: left;
+                background-color: $color-white-0;
+                @include styleText($color-black-0,$fs-1,$fw-normal);
+                span{
+                    margin: 0 10px;
+                }
+                &::after{
+                    position: absolute;
+                    top: 50%;
+                    right: 10%;
+                    transform: translate(-50%,-50%);
+                }
+                &:focus{
+                    box-shadow: none;
+                }
+                &:active{
+                    background-color: $color-white-0;
+                    box-shadow: none;
+                    @include styleText($color-black-0,$fs-1,$fw-normal);
+                }
+            }
+        }
+        .dropdown-menu{
+            min-width: 160px;
+        }
+    }
+    .btn-secondary:not(:disabled):not(.disabled).active:focus, .btn-secondary:not(:disabled):not(.disabled):active:focus, .show>.btn-secondary.dropdown-toggle:focus{
+        box-shadow: none;
+    }
+}

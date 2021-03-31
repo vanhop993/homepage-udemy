@@ -1,0 +1,112 @@
+.courses{
+    margin: 20px 0;
+    .courses__left{
+        width: 100%;
+        height: 361px;
+        padding: 0 32px;
+        @include styleText($color-black-0,$fs-0 + 1,$fw-normal);
+        background-color: $color-gray-5;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        .courses__left-container{
+            .courses__left-header{
+                @include styleText($color-black-0,$fs-2 - 1,$fw-bold-1);
+            }
+        }
+    }
+    .courses__right{
+        .courses__right-nav{
+            padding: 0 5px;
+            .courses__right-colapse{
+                display: none;
+            }
+            .collapse{
+                display: flex;
+                &:not(.show){
+                @include resposive('medium'){
+                    display: none;
+                    }
+                }
+                @include resposive('medium'){
+                    display: block;
+                }
+                .nav-it{
+                    @include resposive('medium'){
+                        width: 100%;
+                    }   
+                }
+                .nav-per{
+                    @include resposive('medium'){
+                        width: 100%;
+                    } 
+                }
+            }
+        }
+        .courses__right-card{
+            transition: all .5s;
+            .courses__right-card-img{
+                position: relative;
+                img{
+                    height: 122px;
+                }
+                .courses__right-card-overlay{
+                    width: 100%;
+                    height: 122px;
+                    position: absolute;
+                    top:0;
+                    background-color: $color-black-dark-2;
+                    display: none;
+                    transition: all .5s;
+                }
+            }
+            .courses__right-prize{
+                margin: 0;
+                text-align: right;
+                @include styleText($color-black-0,$fs-0 + 3,$fw-bold-1);
+                span{
+                    text-decoration: line-through;
+                    @include styleText($color-black-0,$fs-1,$fw-normal);
+                }
+            }
+            &:hover{
+                cursor: pointer;
+                box-shadow: 0 5px 10px 5px #14171c1a, 0 3px 6px 3px #14171c1a;
+                z-index: 100;
+            }
+            &:hover .courses__right-card-overlay{
+                display: block;
+            }
+        }
+    }
+}
+.courses{
+    .container{
+        .pdr-0{
+            padding-right: 0 !important;
+        }
+    }
+}
+// resposive
+.courses__left{
+    @include resposive('large'){
+        display: none !important;
+    }
+}
+.courses__right-colapse{
+    @include resposive('medium'){
+        display: block !important;
+    }
+    #nav-tab{
+        .nav-it{
+            @include resposive('medium'){
+                width: 100%;
+            }
+        }
+        .nav-per{
+            @include resposive('medium'){
+                width: 100%;
+            }
+        }
+    }
+}

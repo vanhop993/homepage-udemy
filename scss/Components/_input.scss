@@ -1,0 +1,33 @@
+.input-header-search{
+    @include form($pd-1,$pd-1 + 2, $height-1 - 6, none,$color-white-cream);
+    @include styleText($color-black-light,$fs-1,$fw-normal);
+    &:focus{
+        border-color: $color-black-dark;
+        border-top: 1px solid $color-gray-3;
+        border-bottom: 1px solid $color-gray-3;
+        border-left: 1px solid $color-gray-3;
+        border-right: none ;
+        box-shadow: none;
+        transition: none;
+    }
+    &:focus + .input-group-append{
+        border-color: $color-black-dark;
+        border-top: 1px solid $color-gray-3;
+        border-bottom: 1px solid $color-gray-3;
+        border-left: none;
+        border-right: 1px solid $color-gray-3;
+        .btnHeader-search{
+            background-color: $color-white-0;
+            &:hover{
+                @include styleButtonHover($color-red-0,$color-red-0,$color-white-0);
+            }
+        }
+    }
+}
+.input-carousel-search{
+    @include form($pd-1 + 1,$pd-2 - 3, $height-1, none,$color-white-0);
+    @include styleText($color-black-light,$fs-2,$fw-100);
+    &:focus{
+        box-shadow: none;
+    }
+}

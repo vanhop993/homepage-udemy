@@ -1,0 +1,50 @@
+.btnUde-while{
+    // có thể dùng toán tử +- trong biến vd như pd-1 + 1
+    @include styleButton($color-gray-4,$color-white-0,$pd-1 + 1,$pd-1 + 2,$border-radius);
+    @include styleText($color-gray-4,$fs-0,$fw-bold);
+        &:hover{
+            @include styleButtonHover($color-black-0,$color-white-0,$color-black-0);
+        }
+}
+.btnUde-while-1{
+    @include styleButton($color-white-0,$color-white-0,$pd-1 + 2, $pd-1 + 5,$border-radius + 1);
+    @include styleText($color-gray-4,$fs-1,$fw-normal);
+        &:hover{
+            @include styleButtonHover($color-gray-7,$color-gray-7,$color-black-0);
+        }
+}
+.btnUde-red{
+    @include styleButton($color-red-0,$color-red-0,$pd-1 + 1,$pd-1 + 2,$border-radius);
+    @include styleText($color-white-0,$fs-0,$fw-bold);
+        &:hover{
+            @include styleButtonHover($color-red-2,$color-red-2,$color-white-0);
+        }
+}
+.btnCarousel-search{
+    @include styleButton($color-white-0,$color-white-0,$mg-1 + 1,$pd-1 + 4,$border-radius);
+    @include styleText($color-red-0,$fs-0,$fw-normal);
+        &:hover{
+            @include styleButtonHover($color-red-0,$color-red-0,$color-white-0);
+        }
+}
+.btnHeader-search{
+    @include styleButton($color-white-cream,$color-white-cream,$mg-1 + 1,$pd-1 + 2,$border-radius);
+    @include styleText($color-red-0,$fs-0,$fw-normal);
+        &:hover{
+            @include styleButtonHover($color-red-0,$color-red-0,$color-white-0);
+        }
+}
+.btnHeader-cart{
+    .header-cart-btn{
+        @include styleButton($color-white-0,$color-white-0,$pd-0,$pd-0,50%);
+        i{
+            @include styleText($color-black-0,$fs-2,900);
+            padding: $pd-1 $pd-1;
+        }
+    }
+     &:hover{
+         .header-cart-btn{
+            @include styleButtonHover($color-gray-7,$color-gray-7,$color-black-0);
+         }
+     }
+}

@@ -1,0 +1,48 @@
+@mixin styleText($color,$fs,$fw) {
+    color: $color;
+    font-size: $fs;
+    font-weight: $fw;
+}
+@mixin styleButton($boder-color,$bg-color,$pd-y,$pd-x,$radius) {
+    border: 1px solid $boder-color;
+    background-color: $bg-color;
+    padding: $pd-y $pd-x;
+    border-radius: $radius;
+}
+@mixin styleButtonHover($bd-color,$bg-color,$color) {
+    border-color: $bd-color;
+    background-color: $bg-color;
+    color: $color;
+}
+// yêu cầu/ tham số small.
+// kết quả lấy đc : 576px.
+// $screen là than số small truyền vào.
+@mixin resposive($screen) {
+    //map: tên mảng cần duyệt
+    //key: là tham số truyền vào.
+    //map-has-key là hàm tìm kiếm trả về kết quả true/false.
+    @if(map-has-key($map:$breakpoints, $key:$screen)){
+        //nếu screen đúng thì lấy giá trị.
+        //map-get:là lấy kích thước màn hình dựa vào tên màn hình
+        $value: map-get($map:$breakpoints , $key:$screen );
+        @media screen and (max-width:$value){
+            // @content là đem code css đc điền trong khi gọi hàm responsive
+            @content;
+        }
+    }
+    @else{
+        @warn 'Màn hình ko đúng';
+    }
+}
+//khích thước header-dropdown-menu
+@mixin sizeDropDownMenu($width,$height) {
+    width: $width;
+    height: $height;
+}
+//form
+@mixin form($pd-y,$pd-x,$height,$border,$bg-color) {
+    padding: $pd-y $pd-x;
+    height: $height;
+    border: $border;
+    background-color: $bg-color;
+}
